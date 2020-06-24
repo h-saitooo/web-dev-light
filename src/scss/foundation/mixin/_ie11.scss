@@ -1,0 +1,24 @@
+// @desc - ie11のみに反映するものを生成します
+// @param { null } - 引数なし
+// @example scss - Usage
+//
+// .foo {
+//   @include _ie11 {
+//     font-size: 18px;
+//   }
+// }
+//
+// @example css - CSS output
+// @media all and (-ms-high-contrast: none) {
+//   *::-ms-backdrop, .foo {
+//     font-size: 18px;
+//   }
+// }
+
+@mixin ie11 {
+  @media all and (-ms-high-contrast: none) {
+    *::-ms-backdrop, & {
+      @content;
+    }
+  }
+}

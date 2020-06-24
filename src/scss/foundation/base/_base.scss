@@ -1,0 +1,119 @@
+/* #Base
+   -------------------------------------------------------------------------- */
+
+// `padding`と`border`を`width`に含めます。(必要に応じて使用)
+// https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  font-family: $_font-family-original;
+  font-weight: $_font-weight-normal;
+  color: $_color-text;
+  background-color: $_color-bg;
+  /* アンチエイリアスを指定する */
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  /* メトリクスカーニングを指定する */
+  font-kerning: normal;
+
+  @include _mq-down('xl') {
+    width: 100%;
+  }
+  @include _mq-down('lg') {
+    width: 100%;
+  }
+  @include _mq-down('md') {
+    width: 100%;
+  }
+  @include _mq-down('sm') {
+    width: 100%;
+  }
+  @include _mq-down('xs') {
+    width: 100%;
+  }
+  @include _mq-up('xs') {
+    width: 100%;
+  }
+  @include _mq-up('sm') {
+    width: 100%;
+  }
+  @include _mq-up('md') {
+    width: 100%;
+  }
+  @include _mq-up('lg') {
+    width: 100%;
+  }
+  @include _mq-up('xl') {
+    width: 100%;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+dd {
+  margin-left: 0;
+}
+
+th {
+  text-align: left;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+i,
+cite,
+em,
+address,
+dfn {
+  font-style: normal;
+}
+
+code,
+pre {
+  font-family: Consolas, Menlo, Courier, monospace;
+}
+
+code {
+  padding: 0.2em;
+  // border-radius: $_radius;
+  // font-size: $_font-size--small;
+  background-color: rgba(0,0,0,0.06);
+}
+
+pre code {
+  padding: 0;
+  // font-size: $_font-size--small;
+  background-color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6,
+ul, ol, dl,
+blockquote, p, address,
+hr,
+table,
+fieldset, figure,
+pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img[src$=".svg"] {
+  width: 100%;
+}

@@ -1,0 +1,22 @@
+// 前のデザイン引き継ぎ用
+@mixin container($width:1000px) {
+  width: 100%;
+  max-width: $width;
+  margin-right: auto;
+  margin-left: auto;
+  @include _mq-up('md') {
+    width: $width;
+  }
+}
+
+@mixin inner($width:1000px,$padding:20px) {
+  width: 100%;
+  max-width: $width;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $padding;
+  padding-left: $padding;
+  @include _mq-up('md') {
+    width: $width;
+  }
+}

@@ -1,0 +1,24 @@
+// min-width
+$_breakpoint-up: (
+  'xs': 'screen and (min-width: 361px)',
+  'sm': 'screen and (min-width: 451px)',
+  'md': 'screen and (min-width: 769px)',
+  'lg': 'screen and (min-width: 1001px)',
+  'xl': 'screen and (min-width: 1279px)',
+) !default;
+
+// max-width
+$_breakpoint-down: (
+  'xs': 'screen and (max-width: 360px)',
+  'sm': 'screen and (max-width: 450px)',
+  'md': 'screen and (max-width: 768px)',
+  'lg': 'screen and (max-width: 1000px)',
+  'xl': 'screen and (max-width: 1280px)',
+) !default;
+
+// between
+$_breakpoint-between: (
+  'sm': 'screen and (min-width:480px) and (max-width:599px)',
+  'md': 'screen and (min-width:600px) and (max-width:959px)',
+  'lg': 'screen and (min-width:960px) and (max-width:1279px)'
+) !default;

@@ -1,0 +1,40 @@
+{
+  "name": "dev_light",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/h-saitooo/web-dev-light.git",
+  "author": "Hiroki Saito",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack --watch",
+    "build": "NODE_ENV=production webpack",
+    "upload:dev": "node ./deployForServer.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.1",
+    "@babel/preset-env": "^7.10.1",
+    "autoprefixer": "^9.8.0",
+    "babel-loader": "^8.1.0",
+    "browser-sync": "^2.26.7",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "css-loader": "^3.5.3",
+    "cssnano": "^4.1.10",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "node-sass-magic-importer": "^5.3.2",
+    "npm-run-all": "^4.1.5",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^2.0.5",
+    "sass": "^1.26.7",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "core-js": "3",
+    "regenerator-runtime": "^0.13.5",
+    "minireset.css": "^0.0.6",
+    "sanitize.css": "^11.0.1"
+  }
+}
